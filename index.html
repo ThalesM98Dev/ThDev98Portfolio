@@ -27,14 +27,30 @@
 
         <ul id="navLink"
             class="hidden md:flex items-center gap-4 lg:gap-6 xl:gap-8 rounded-full px-6 lg:px-10 xl:px-12 py-2.5 lg:py-3 bg-white shadow-md bg-opacity-80 backdrop-blur-md font-Ovo dark:border dark:border-white/30 dark:bg-darkHover/80 transition-all duration-300">
-            <li><a class='hover:text-purple-600 dark:hover:text-purple-400 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-purple-500 rounded-lg px-2 py-1' href="#top" aria-label="Navigate to Home section">Home</a></li>
-            <li><a class='hover:text-purple-600 dark:hover:text-purple-400 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-purple-500 rounded-lg px-2 py-1' href="#about" aria-label="Navigate to About section">About me</a></li>
-            <li><a class='hover:text-purple-600 dark:hover:text-purple-400 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-purple-500 rounded-lg px-2 py-1' href="#services" aria-label="Navigate to Services section">Services</a></li>
-            <li><a class='hover:text-purple-600 dark:hover:text-purple-400 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-purple-500 rounded-lg px-2 py-1' href="#work" aria-label="Navigate to Work section">My Work</a></li>
-            <li><a class='hover:text-purple-600 dark:hover:text-purple-400 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-purple-500 rounded-lg px-2 py-1' href="#contact" aria-label="Navigate to Contact section">Contact me</a></li>
+            <li><a class='hover:text-purple-600 dark:hover:text-purple-400 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-purple-500 rounded-lg px-2 py-1' href="#top" aria-label="Navigate to Home section" data-i18n="nav.home">Home</a></li>
+            <li><a class='hover:text-purple-600 dark:hover:text-purple-400 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-purple-500 rounded-lg px-2 py-1' href="#about" aria-label="Navigate to About section" data-i18n="nav.about">About me</a></li>
+            <li><a class='hover:text-purple-600 dark:hover:text-purple-400 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-purple-500 rounded-lg px-2 py-1' href="#services" aria-label="Navigate to Services section" data-i18n="nav.services">Services</a></li>
+            <li><a class='hover:text-purple-600 dark:hover:text-purple-400 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-purple-500 rounded-lg px-2 py-1' href="#work" aria-label="Navigate to Work section" data-i18n="nav.work">My Work</a></li>
+            <li><a class='hover:text-purple-600 dark:hover:text-purple-400 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-purple-500 rounded-lg px-2 py-1' href="#contact" aria-label="Navigate to Contact section" data-i18n="nav.contact">Contact me</a></li>
         </ul>
 
         <div class="flex items-center gap-3 sm:gap-4">
+            <div class="flex items-center gap-1 sm:gap-1.5 border border-gray-300 dark:border-white/30 rounded-full px-1 py-0.5 bg-white/70 dark:bg-darkHover/70 text-xs sm:text-sm font-medium">
+                <button type="button"
+                    class="px-2 sm:px-3 py-0.5 rounded-full transition-colors duration-200"
+                    data-lang-btn="en"
+                    onclick="setLanguage('en')"
+                    aria-label="Switch to English">
+                    <span data-i18n="lang.en">EN</span>
+                </button>
+                <button type="button"
+                    class="px-2 sm:px-3 py-0.5 rounded-full transition-colors duration-200"
+                    data-lang-btn="de"
+                    onclick="setLanguage('de')"
+                    aria-label="Switch to German">
+                    <span data-i18n="lang.de">DE</span>
+                </button>
+            </div>
             <button onclick="toggleTheme()" aria-label="Toggle dark mode" class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-darkHover transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2">
                 <img src="./assets/moon_icon.png" alt="Switch to dark mode" class="w-5 dark:hidden" />
                 <img src="./assets/sun_icon.png" alt="Switch to light mode" class="w-5 hidden dark:block" />
@@ -42,7 +58,7 @@
 
             <a href="#contact"
                 class="hidden lg:flex items-center gap-2 px-6 xl:px-8 py-2 border border-gray-300 hover:bg-slate-100/70 dark:hover:bg-darkHover rounded-full ml-2 font-Ovo dark:border-white/30 transition-all duration-200 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2">
-                Contact
+                <span data-i18n="nav.cta_contact">Contact</span>
                 <img src="./assets/arrow-icon.png" alt="" class="w-3 dark:hidden" />
                 <img src="./assets/arrow-icon-dark.png" alt="" class="w-3 hidden dark:block" />
             </a>
@@ -62,11 +78,11 @@
                 <img src="./assets/close-white.png" alt="Close menu" class="w-5 cursor-pointer hidden dark:block" />
             </button>
 
-            <li><a href="#top" onclick="closeMenu()" class="block py-3 text-lg hover:text-purple-600 dark:hover:text-purple-400 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-purple-500 rounded-lg px-2">Home</a></li>
-            <li><a href="#about" onclick="closeMenu()" class="block py-3 text-lg hover:text-purple-600 dark:hover:text-purple-400 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-purple-500 rounded-lg px-2">About me</a></li>
-            <li><a href="#services" onclick="closeMenu()" class="block py-3 text-lg hover:text-purple-600 dark:hover:text-purple-400 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-purple-500 rounded-lg px-2">Services</a></li>
-            <li><a href="#work" onclick="closeMenu()" class="block py-3 text-lg hover:text-purple-600 dark:hover:text-purple-400 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-purple-500 rounded-lg px-2">My Work</a></li>
-            <li><a href="#contact" onclick="closeMenu()" class="block py-3 text-lg hover:text-purple-600 dark:hover:text-purple-400 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-purple-500 rounded-lg px-2">Contact me</a></li>
+            <li><a href="#top" onclick="closeMenu()" class="block py-3 text-lg hover:text-purple-600 dark:hover:text-purple-400 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-purple-500 rounded-lg px-2" data-i18n="nav.home">Home</a></li>
+            <li><a href="#about" onclick="closeMenu()" class="block py-3 text-lg hover:text-purple-600 dark:hover:text-purple-400 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-purple-500 rounded-lg px-2" data-i18n="nav.about">About me</a></li>
+            <li><a href="#services" onclick="closeMenu()" class="block py-3 text-lg hover:text-purple-600 dark:hover:text-purple-400 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-purple-500 rounded-lg px-2" data-i18n="nav.services">Services</a></li>
+            <li><a href="#work" onclick="closeMenu()" class="block py-3 text-lg hover:text-purple-600 dark:hover:text-purple-400 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-purple-500 rounded-lg px-2" data-i18n="nav.work">My Work</a></li>
+            <li><a href="#contact" onclick="closeMenu()" class="block py-3 text-lg hover:text-purple-600 dark:hover:text-purple-400 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-purple-500 rounded-lg px-2" data-i18n="nav.contact">Contact me</a></li>
         </ul>
     </nav>
 
@@ -76,13 +92,13 @@
             <img src="./assets/profile-img.webp" alt="Thales Mustafa profile picture" class="rounded-full w-28 h-28 sm:w-32 sm:h-32 md:w-36 md:h-36 mx-auto object-cover shadow-lg ring-4 ring-purple-200 dark:ring-purple-900/50 transition-all duration-300 hover:scale-105" />
         </div>
         <h2 class="flex items-end justify-center gap-2 text-lg sm:text-xl md:text-2xl mb-2 sm:mb-4 font-Ovo text-gray-700 dark:text-gray-300">
-            Hi! I&apos;m Thales Mustafa
+            <span data-i18n="hero.greeting">Hi! I&apos;m Thales Mustafa</span>
             <img src="./assets/hand-icon.png" alt="Waving hand emoji" class="w-5 sm:w-6 mb-1 animate-bounce" />
         </h2>
-        <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[66px] font-Ovo font-bold mb-4 sm:mb-6 text-gray-900 dark:text-white leading-tight">
+        <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[66px] font-Ovo font-bold mb-4 sm:mb-6 text-gray-900 dark:text-white leading-tight" data-i18n="hero.role">
             Software Engineer
         </h1>
-        <p class="max-w-2xl mx-auto font-Ovo text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-300 leading-relaxed px-4 mb-6 sm:mb-8">
+        <p class="max-w-2xl mx-auto font-Ovo text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-300 leading-relaxed px-4 mb-6 sm:mb-8" data-i18n="hero.description">
             Results-driven Software Engineer with 3 years of experience specializing
             in Laravel, MySQL, and RESTful APIs. I build scalable web applications, optimize databases, and
             cross-platform mobile solutions with Flutter.
@@ -91,12 +107,12 @@
         <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 mt-4 sm:mt-6 w-full px-4">
             <a href="#contact"
                 class="w-full sm:w-auto px-8 sm:px-10 py-3 sm:py-3.5 border rounded-full bg-gradient-to-r from-[#b820e6] to-[#da7d20] text-white flex items-center justify-center gap-2 dark:border-transparent font-medium shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-purple-500 focus:ring-offset-2">
-                Contact me <img src="./assets/right-arrow-white.png" alt="" class="w-4" />
+                <span data-i18n="hero.cta_contact">Contact me</span> <img src="./assets/right-arrow-white.png" alt="" class="w-4" />
             </a>
 
             <a href="./assets/thales_mustafa.pdf" download
                 class="w-full sm:w-auto px-8 sm:px-10 py-3 sm:py-3.5 rounded-full border border-gray-300 dark:border-white/25 hover:bg-slate-100/70 dark:hover:bg-darkHover flex items-center justify-center gap-2 bg-white dark:bg-transparent dark:text-white font-medium shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-purple-500 focus:ring-offset-2">
-                My resume <img src="./assets/download-icon.png" alt="Download icon" class="w-4 dark:invert" />
+                <span data-i18n="hero.cta_resume">My resume</span> <img src="./assets/download-icon.png" alt="Download icon" class="w-4 dark:invert" />
             </a>
         </div>
     </section>
@@ -104,8 +120,8 @@
     <!-- ----- about me section ------ -->
     <section id="about" class="w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-[8%] py-12 sm:py-16 md:py-20 lg:py-24 scroll-mt-20">
         <header class="text-center mb-8 sm:mb-12 md:mb-16">
-            <h4 class="mb-2 sm:mb-3 text-base sm:text-lg md:text-xl font-Ovo text-purple-600 dark:text-purple-400 uppercase tracking-wider">Introduction</h4>
-            <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-Ovo font-bold text-gray-900 dark:text-white">About me</h2>
+            <h4 class="mb-2 sm:mb-3 text-base sm:text-lg md:text-xl font-Ovo text-purple-600 dark:text-purple-400 uppercase tracking-wider" data-i18n="about.intro_kicker">Introduction</h4>
+            <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-Ovo font-bold text-gray-900 dark:text-white" data-i18n="about.title">About me</h2>
         </header>
         <div class="flex w-full flex-col lg:flex-row items-center lg:items-start gap-12 sm:gap-16 lg:gap-20 my-12 sm:my-16 lg:my-20">
             <div class="max-w-max mx-auto lg:mx-0 relative flex-shrink-0">
@@ -113,7 +129,7 @@
                     class="w-56 sm:w-64 md:w-72 lg:w-80 rounded-3xl max-w-none shadow-2xl ring-4 ring-purple-200 dark:ring-purple-900/50 transition-transform duration-300 hover:scale-105">
             </div>
             <div class="flex-1 w-full">
-                <p class="mb-8 sm:mb-10 md:mb-12 max-w-2xl font-Ovo text-base sm:text-lg md:text-xl text-gray-700 dark:text-gray-300 leading-relaxed">
+                <p class="mb-8 sm:mb-10 md:mb-12 max-w-2xl font-Ovo text-base sm:text-lg md:text-xl text-gray-700 dark:text-gray-300 leading-relaxed" data-i18n="about.description">
                     Results-driven Software Engineer with 3 years of experience
                     specializing in Laravel, MySQL, and RESTful API development. I architect scalable web applications,
                     optimize complex databases, and build cross-platform mobile solutions with Flutter. Committed to
@@ -124,28 +140,28 @@
                         class="border border-gray-300 dark:border-white/30 rounded-xl p-5 sm:p-6 cursor-pointer hover:bg-lightHover hover:-translate-y-2 duration-300 hover:shadow-lg dark:hover:shadow-white/20 dark:hover:bg-darkHover/50 transition-all focus-within:ring-2 focus-within:ring-purple-500">
                         <img src="./assets/code-icon.png" alt="Code icon" class="w-6 sm:w-7 mt-2 dark:hidden"><img
                             src="./assets/code-icon-dark.png" alt="Code icon" class="w-6 sm:w-7 mt-2 hidden dark:block">
-                        <h3 class="my-3 sm:my-4 font-semibold text-base sm:text-lg text-gray-700 dark:text-white">Languages & Stack</h3>
-                        <p class="text-gray-600 text-sm sm:text-base dark:text-white/80 leading-relaxed">PHP/Laravel, JavaScript/Vue.js, Flutter,
+                        <h3 class="my-3 sm:my-4 font-semibold text-base sm:text-lg text-gray-700 dark:text-white" data-i18n="about.card_stack_title">Languages & Stack</h3>
+                        <p class="text-gray-600 text-sm sm:text-base dark:text-white/80 leading-relaxed" data-i18n="about.card_stack_body">PHP/Laravel, JavaScript/Vue.js, Flutter,
                             HTML/CSS, MySQL</p>
                     </li>
                     <li
                         class="border border-gray-300 dark:border-white/30 rounded-xl p-5 sm:p-6 cursor-pointer hover:bg-lightHover hover:-translate-y-2 duration-300 hover:shadow-lg dark:hover:shadow-white/20 dark:hover:bg-darkHover/50 transition-all focus-within:ring-2 focus-within:ring-purple-500">
                         <img src="./assets/edu-icon.png" alt="Education icon" class="w-6 sm:w-7 mt-2 dark:hidden"><img
                             src="./assets/edu-icon-dark.png" alt="Education icon" class="w-6 sm:w-7 mt-2 hidden dark:block">
-                        <h3 class="my-3 sm:my-4 font-semibold text-base sm:text-lg text-gray-700 dark:text-white">Education</h3>
-                        <p class="text-gray-600 text-sm sm:text-base dark:text-white/80 leading-relaxed">Bachelor&apos;s in Information Technology
+                        <h3 class="my-3 sm:my-4 font-semibold text-base sm:text-lg text-gray-700 dark:text-white" data-i18n="about.card_education_title">Education</h3>
+                        <p class="text-gray-600 text-sm sm:text-base dark:text-white/80 leading-relaxed" data-i18n="about.card_education_body">Bachelor&apos;s in Information Technology
                             Engineering, Damascus University (2024)</p>
                     </li>
                     <li
                         class="border border-gray-300 dark:border-white/30 rounded-xl p-5 sm:p-6 cursor-pointer hover:bg-lightHover hover:-translate-y-2 duration-300 hover:shadow-lg dark:hover:shadow-white/20 dark:hover:bg-darkHover/50 transition-all focus-within:ring-2 focus-within:ring-purple-500 sm:col-span-2 lg:col-span-1">
                         <img src="./assets/project-icon.png" alt="Project icon" class="w-6 sm:w-7 mt-2 dark:hidden"><img
                             src="./assets/project-icon-dark.png" alt="Project icon" class="w-6 sm:w-7 mt-2 hidden dark:block">
-                        <h3 class="my-3 sm:my-4 font-semibold text-base sm:text-lg text-gray-700 dark:text-white">Projects</h3>
-                        <p class="text-gray-600 text-sm sm:text-base dark:text-white/80 leading-relaxed">Fleet management, GPS tracking, HR systems,
+                        <h3 class="my-3 sm:my-4 font-semibold text-base sm:text-lg text-gray-700 dark:text-white" data-i18n="about.card_projects_title">Projects</h3>
+                        <p class="text-gray-600 text-sm sm:text-base dark:text-white/80 leading-relaxed" data-i18n="about.card_projects_body">Fleet management, GPS tracking, HR systems,
                             Flutter apps at MTS Group</p>
                     </li>
                 </ul>
-                <h4 class="my-6 sm:my-8 text-lg sm:text-xl md:text-2xl text-gray-700 dark:text-white/90 font-Ovo font-semibold">Tools I use</h4>
+                <h4 class="my-6 sm:my-8 text-lg sm:text-xl md:text-2xl text-gray-700 dark:text-white/90 font-Ovo font-semibold" data-i18n="about.tools_heading">Tools I use</h4>
                 <ul class="flex flex-wrap items-center gap-3 sm:gap-4 md:gap-5">
                     <li
                         class="flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 aspect-square border border-gray-300 dark:border-white/30 rounded-lg cursor-pointer hover:-translate-y-2 hover:shadow-md duration-300 transition-all bg-white dark:bg-darkHover/30">
@@ -183,9 +199,9 @@
     <!-- Services Section -->
     <section id="services" class="w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-[8%] py-12 sm:py-16 md:py-20 lg:py-24 scroll-mt-20 bg-gray-50 dark:bg-darkHover/30">
         <header class="text-center mb-8 sm:mb-12 md:mb-16">
-            <h4 class="mb-2 sm:mb-3 text-base sm:text-lg md:text-xl font-Ovo text-purple-600 dark:text-purple-400 uppercase tracking-wider">What I offer</h4>
-            <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-Ovo font-bold text-gray-900 dark:text-white mb-4 sm:mb-6">Services</h2>
-            <p class="text-center max-w-2xl mx-auto mt-4 sm:mt-5 mb-8 sm:mb-12 font-Ovo text-base sm:text-lg text-gray-600 dark:text-gray-300 leading-relaxed px-4">
+            <h4 class="mb-2 sm:mb-3 text-base sm:text-lg md:text-xl font-Ovo text-purple-600 dark:text-purple-400 uppercase tracking-wider" data-i18n="services.kicker">What I offer</h4>
+            <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-Ovo font-bold text-gray-900 dark:text-white mb-4 sm:mb-6" data-i18n="services.title">Services</h2>
+            <p class="text-center max-w-2xl mx-auto mt-4 sm:mt-5 mb-8 sm:mb-12 font-Ovo text-base sm:text-lg text-gray-600 dark:text-gray-300 leading-relaxed px-4" data-i18n="services.description">
                 Comprehensive software development services tailored to your business needs.
             </p>
         </header>
@@ -196,8 +212,8 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
                     </svg>
                 </div>
-                <h3 class="text-xl sm:text-2xl font-Ovo font-semibold text-gray-900 dark:text-white mb-3 sm:mb-4">Backend Development</h3>
-                <p class="text-gray-600 dark:text-gray-300 text-sm sm:text-base leading-relaxed">Scalable Laravel applications with RESTful APIs, database optimization, and robust architecture following SOLID principles.</p>
+                <h3 class="text-xl sm:text-2xl font-Ovo font-semibold text-gray-900 dark:text-white mb-3 sm:mb-4" data-i18n="services.backend_title">Backend Development</h3>
+                <p class="text-gray-600 dark:text-gray-300 text-sm sm:text-base leading-relaxed" data-i18n="services.backend_body">Scalable Laravel applications with RESTful APIs, database optimization, and robust architecture following SOLID principles.</p>
             </div>
             <div class="bg-white dark:bg-darkHover/50 border border-gray-200 dark:border-white/20 rounded-xl sm:rounded-2xl p-6 sm:p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
                 <div class="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4 sm:mb-6">
@@ -205,8 +221,8 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
                     </svg>
                 </div>
-                <h3 class="text-xl sm:text-2xl font-Ovo font-semibold text-gray-900 dark:text-white mb-3 sm:mb-4">Mobile Development</h3>
-                <p class="text-gray-600 dark:text-gray-300 text-sm sm:text-base leading-relaxed">Cross-platform Flutter applications with native performance, beautiful UI/UX, and seamless user experiences.</p>
+                <h3 class="text-xl sm:text-2xl font-Ovo font-semibold text-gray-900 dark:text-white mb-3 sm:mb-4" data-i18n="services.mobile_title">Mobile Development</h3>
+                <p class="text-gray-600 dark:text-gray-300 text-sm sm:text-base leading-relaxed" data-i18n="services.mobile_body">Cross-platform Flutter applications with native performance, beautiful UI/UX, and seamless user experiences.</p>
             </div>
             <div class="bg-white dark:bg-darkHover/50 border border-gray-200 dark:border-white/20 rounded-xl sm:rounded-2xl p-6 sm:p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 md:col-span-2 lg:col-span-1">
                 <div class="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mb-4 sm:mb-6">
@@ -214,8 +230,8 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
                     </svg>
                 </div>
-                <h3 class="text-xl sm:text-2xl font-Ovo font-semibold text-gray-900 dark:text-white mb-3 sm:mb-4">Code Quality</h3>
-                <p class="text-gray-600 dark:text-gray-300 text-sm sm:text-base leading-relaxed">Clean Code practices, Test-Driven Development (TDD), and maintainable solutions that scale with your business.</p>
+                <h3 class="text-xl sm:text-2xl font-Ovo font-semibold text-gray-900 dark:text-white mb-3 sm:mb-4" data-i18n="services.quality_title">Code Quality</h3>
+                <p class="text-gray-600 dark:text-gray-300 text-sm sm:text-base leading-relaxed" data-i18n="services.quality_body">Clean Code practices, Test-Driven Development (TDD), and maintainable solutions that scale with your business.</p>
             </div>
         </div>
     </section>
@@ -223,9 +239,9 @@
     <!-- My Work Section -->
     <section id="work" class="w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-[8%] py-12 sm:py-16 md:py-20 lg:py-24 scroll-mt-20">
         <header class="text-center mb-8 sm:mb-12 md:mb-16">
-            <h4 class="mb-2 sm:mb-3 text-base sm:text-lg md:text-xl font-Ovo text-purple-600 dark:text-purple-400 uppercase tracking-wider">My portfolio</h4>
-            <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-Ovo font-bold text-gray-900 dark:text-white mb-4 sm:mb-6">My latest work</h2>
-            <p class="text-center max-w-2xl mx-auto mt-4 sm:mt-5 mb-8 sm:mb-12 font-Ovo text-base sm:text-lg text-gray-600 dark:text-gray-300 leading-relaxed px-4">
+            <h4 class="mb-2 sm:mb-3 text-base sm:text-lg md:text-xl font-Ovo text-purple-600 dark:text-purple-400 uppercase tracking-wider" data-i18n="work.kicker">My portfolio</h4>
+            <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-Ovo font-bold text-gray-900 dark:text-white mb-4 sm:mb-6" data-i18n="work.title">My latest work</h2>
+            <p class="text-center max-w-2xl mx-auto mt-4 sm:mt-5 mb-8 sm:mb-12 font-Ovo text-base sm:text-lg text-gray-600 dark:text-gray-300 leading-relaxed px-4" data-i18n="work.description">
                 A collection of projects from MTS Group showcasing
                 Laravel backends, Flutter apps, and full-stack solutions.
             </p>
@@ -237,8 +253,8 @@
                 <div
                     class="bg-white dark:bg-darkHover w-[92%] sm:w-10/12 rounded-lg sm:rounded-md absolute bottom-4 sm:bottom-5 left-1/2 -translate-x-1/2 py-3 sm:py-4 px-4 sm:px-5 flex items-center justify-between duration-300 group-hover:bottom-6 sm:group-hover:bottom-7 shadow-lg">
                     <div class="flex-1 min-w-0 pr-2">
-                        <h3 class="font-semibold text-sm sm:text-base md:text-lg text-gray-900 dark:text-white mb-1">Fleet Management System</h3>
-                        <p class="text-xs sm:text-sm text-gray-700 dark:text-gray-300 truncate">Laravel · Load assignments, maintenance, inventory</p>
+                        <h3 class="font-semibold text-sm sm:text-base md:text-lg text-gray-900 dark:text-white mb-1" data-i18n="work.card1_title">Fleet Management System</h3>
+                        <p class="text-xs sm:text-sm text-gray-700 dark:text-gray-300 truncate" data-i18n="work.card1_body">Laravel · Load assignments, maintenance, inventory</p>
                     </div>
                     <div
                         class="border rounded-full border-black dark:border-white w-8 h-8 sm:w-9 sm:h-9 aspect-square flex items-center justify-center shadow-md group-hover:bg-lime-300 dark:group-hover:bg-purple-500 transition-all flex-shrink-0">
@@ -252,8 +268,8 @@
                 <div
                     class="bg-white dark:bg-darkHover w-[92%] sm:w-10/12 rounded-lg sm:rounded-md absolute bottom-4 sm:bottom-5 left-1/2 -translate-x-1/2 py-3 sm:py-4 px-4 sm:px-5 flex items-center justify-between duration-300 group-hover:bottom-6 sm:group-hover:bottom-7 shadow-lg">
                     <div class="flex-1 min-w-0 pr-2">
-                        <h3 class="font-semibold text-sm sm:text-base md:text-lg text-gray-900 dark:text-white mb-1">MTS GPS Tracking App</h3>
-                        <p class="text-xs sm:text-sm text-gray-700 dark:text-gray-300 truncate">Flutter · Real-time vehicle tracking, 1,700+ vehicles</p>
+                        <h3 class="font-semibold text-sm sm:text-base md:text-lg text-gray-900 dark:text-white mb-1" data-i18n="work.card2_title">MTS GPS Tracking App</h3>
+                        <p class="text-xs sm:text-sm text-gray-700 dark:text-gray-300 truncate" data-i18n="work.card2_body">Flutter · Real-time vehicle tracking, 1,700+ vehicles</p>
                     </div>
                     <div
                         class="border rounded-full border-black dark:border-white w-8 h-8 sm:w-9 sm:h-9 aspect-square flex items-center justify-center shadow-md group-hover:bg-lime-300 dark:group-hover:bg-purple-500 transition-all flex-shrink-0">
@@ -267,8 +283,8 @@
                 <div
                     class="bg-white dark:bg-darkHover w-[92%] sm:w-10/12 rounded-lg sm:rounded-md absolute bottom-4 sm:bottom-5 left-1/2 -translate-x-1/2 py-3 sm:py-4 px-4 sm:px-5 flex items-center justify-between duration-300 group-hover:bottom-6 sm:group-hover:bottom-7 shadow-lg">
                     <div class="flex-1 min-w-0 pr-2">
-                        <h3 class="font-semibold text-sm sm:text-base md:text-lg text-gray-900 dark:text-white mb-1">HR System & Biometric</h3>
-                        <p class="text-xs sm:text-sm text-gray-700 dark:text-gray-300 truncate">Laravel · ZKTeco, Gmail API, expense reporting</p>
+                        <h3 class="font-semibold text-sm sm:text-base md:text-lg text-gray-900 dark:text-white mb-1" data-i18n="work.card3_title">HR System & Biometric</h3>
+                        <p class="text-xs sm:text-sm text-gray-700 dark:text-gray-300 truncate" data-i18n="work.card3_body">Laravel · ZKTeco, Gmail API, expense reporting</p>
                     </div>
                     <div
                         class="border rounded-full border-black dark:border-white w-8 h-8 sm:w-9 sm:h-9 aspect-square flex items-center justify-center shadow-md group-hover:bg-lime-300 dark:group-hover:bg-purple-500 transition-all flex-shrink-0">
@@ -282,8 +298,8 @@
                 <div
                     class="bg-white dark:bg-darkHover w-[92%] sm:w-10/12 rounded-lg sm:rounded-md absolute bottom-4 sm:bottom-5 left-1/2 -translate-x-1/2 py-3 sm:py-4 px-4 sm:px-5 flex items-center justify-between duration-300 group-hover:bottom-6 sm:group-hover:bottom-7 shadow-lg">
                     <div class="flex-1 min-w-0 pr-2">
-                        <h3 class="font-semibold text-sm sm:text-base md:text-lg text-gray-900 dark:text-white mb-1">MTS TV Entertainment App</h3>
-                        <p class="text-xs sm:text-sm text-gray-700 dark:text-gray-300 truncate">Flutter & Laravel · Movies, TV shows, courses</p>
+                        <h3 class="font-semibold text-sm sm:text-base md:text-lg text-gray-900 dark:text-white mb-1" data-i18n="work.card4_title">MTS TV Entertainment App</h3>
+                        <p class="text-xs sm:text-sm text-gray-700 dark:text-gray-300 truncate" data-i18n="work.card4_body">Flutter & Laravel · Movies, TV shows, courses</p>
                     </div>
                     <div
                         class="border rounded-full border-black dark:border-white w-8 h-8 sm:w-9 sm:h-9 aspect-square flex items-center justify-center shadow-md group-hover:bg-lime-300 dark:group-hover:bg-purple-500 transition-all flex-shrink-0">
@@ -297,8 +313,8 @@
                 <div
                     class="bg-white dark:bg-darkHover w-[92%] sm:w-10/12 rounded-lg sm:rounded-md absolute bottom-4 sm:bottom-5 left-1/2 -translate-x-1/2 py-3 sm:py-4 px-4 sm:px-5 flex items-center justify-between duration-300 group-hover:bottom-6 sm:group-hover:bottom-7 shadow-lg">
                     <div class="flex-1 min-w-0 pr-2">
-                        <h3 class="font-semibold text-sm sm:text-base md:text-lg text-gray-900 dark:text-white mb-1">ContentHub CMS</h3>
-                        <p class="text-xs sm:text-sm text-gray-700 dark:text-gray-300 truncate">Laravel 12 · Articles, categories, comments, admin panel</p>
+                        <h3 class="font-semibold text-sm sm:text-base md:text-lg text-gray-900 dark:text-white mb-1" data-i18n="work.card5_title">ContentHub CMS</h3>
+                        <p class="text-xs sm:text-sm text-gray-700 dark:text-gray-300 truncate" data-i18n="work.card5_body">Laravel 12 · Articles, categories, comments, admin panel</p>
                     </div>
                     <div
                         class="border rounded-full border-black dark:border-white w-8 h-8 sm:w-9 sm:h-9 aspect-square flex items-center justify-center shadow-md group-hover:bg-lime-300 dark:group-hover:bg-purple-500 transition-all flex-shrink-0">
@@ -310,7 +326,7 @@
         <div class="text-center mt-12 sm:mt-16 md:mt-20">
             <a href="#"
                 class="inline-flex items-center justify-center gap-2 text-gray-700 dark:text-white border border-gray-300 dark:border-white/25 hover:bg-slate-100/70 dark:hover:bg-darkHover rounded-full py-2.5 sm:py-3 px-6 sm:px-8 mx-auto duration-300 font-medium shadow-md hover:shadow-lg hover:scale-105 transition-all focus:outline-none focus:ring-4 focus:ring-purple-500 focus:ring-offset-2">
-                Show more
+                <span data-i18n="work.show_more">Show more</span>
                 <img src="./assets/right-arrow-bold.png" alt="" class="w-4 dark:hidden">
                 <img src="./assets/right-arrow-bold-dark.png" alt="" class="w-4 hidden dark:block">
             </a>
@@ -321,9 +337,9 @@
     <section id="contact"
         class="w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-[8%] py-12 sm:py-16 md:py-20 lg:py-24 scroll-mt-20 bg-[url('./assets/footer-bg-color.png')] bg-no-repeat bg-[length:90%_auto] bg-center dark:bg-none">
         <header class="text-center mb-8 sm:mb-12 md:mb-16">
-            <h4 class="mb-2 sm:mb-3 text-base sm:text-lg md:text-xl font-Ovo text-purple-600 dark:text-purple-400 uppercase tracking-wider">Connect with me</h4>
-            <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-Ovo font-bold text-gray-900 dark:text-white mb-4 sm:mb-6">Get in touch</h2>
-            <p class="text-center max-w-2xl mx-auto mt-4 sm:mt-5 mb-8 sm:mb-12 font-Ovo text-base sm:text-lg text-gray-600 dark:text-gray-300 leading-relaxed px-4">
+            <h4 class="mb-2 sm:mb-3 text-base sm:text-lg md:text-xl font-Ovo text-purple-600 dark:text-purple-400 uppercase tracking-wider" data-i18n="contact.kicker">Connect with me</h4>
+            <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-Ovo font-bold text-gray-900 dark:text-white mb-4 sm:mb-6" data-i18n="contact.title">Get in touch</h2>
+            <p class="text-center max-w-2xl mx-auto mt-4 sm:mt-5 mb-8 sm:mb-12 font-Ovo text-base sm:text-lg text-gray-600 dark:text-gray-300 leading-relaxed px-4" data-i18n="contact.description">
                 I'd love to hear from you! If you have any
                 questions, comments or feedback, please use the form below.
             </p>
@@ -337,6 +353,7 @@
                         type="text" 
                         id="name"
                         placeholder="Enter your name"
+                        data-i18n="contact.name_placeholder"
                         class="w-full px-4 sm:px-5 py-3 sm:py-3.5 focus:ring-2 focus:ring-purple-500 focus:border-purple-500 outline-none border border-gray-300 dark:border-white/30 rounded-lg sm:rounded-xl bg-white dark:bg-darkHover/50 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 transition-all duration-200 shadow-sm hover:shadow-md"
                         required 
                         name="name"
@@ -348,6 +365,7 @@
                         type="email" 
                         id="email"
                         placeholder="Enter your email"
+                        data-i18n="contact.email_placeholder"
                         class="w-full px-4 sm:px-5 py-3 sm:py-3.5 focus:ring-2 focus:ring-purple-500 focus:border-purple-500 outline-none border border-gray-300 dark:border-white/30 rounded-lg sm:rounded-xl bg-white dark:bg-darkHover/50 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 transition-all duration-200 shadow-sm hover:shadow-md"
                         required 
                         name="email"
@@ -360,6 +378,7 @@
                     id="message"
                     rows="6" 
                     placeholder="Enter your message"
+                    data-i18n="contact.message_placeholder"
                     class="w-full px-4 sm:px-5 py-3 sm:py-3.5 focus:ring-2 focus:ring-purple-500 focus:border-purple-500 outline-none border border-gray-300 dark:border-white/30 rounded-lg sm:rounded-xl bg-white dark:bg-darkHover/50 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 transition-all duration-200 shadow-sm hover:shadow-md resize-y min-h-[120px]"
                     required 
                     name="message"
@@ -369,7 +388,7 @@
                 <button 
                     type="submit"
                     class="py-3 sm:py-3.5 px-8 sm:px-10 w-full sm:w-auto flex items-center justify-center gap-2 bg-gradient-to-r from-[#b820e6] to-[#da7d20] text-white rounded-full mx-auto hover:shadow-xl hover:scale-105 duration-300 dark:border dark:border-transparent font-medium transition-all focus:outline-none focus:ring-4 focus:ring-purple-500 focus:ring-offset-2">
-                    Submit now
+                    <span data-i18n="contact.submit">Submit now</span>
                     <img src="./assets/right-arrow-white.png" alt="" class="w-4">
                 </button>
             </div>
@@ -395,7 +414,7 @@
             </div>
         </div>
         <div class="text-center sm:flex items-center justify-between border-t border-gray-300 dark:border-gray-700 mx-4 sm:mx-8 md:mx-[10%] pt-6 sm:pt-8 pb-4 sm:pb-6">
-            <p class="text-sm sm:text-base text-gray-600 dark:text-gray-400 mb-4 sm:mb-0">© 2025 Thales Mustafa. All rights reserved.</p>
+            <p class="text-sm sm:text-base text-gray-600 dark:text-gray-400 mb-4 sm:mb-0" data-i18n="footer.copyright">© 2026 Thales Mustafa. All rights reserved.</p>
             <ul class="flex flex-wrap items-center gap-4 sm:gap-6 md:gap-8 lg:gap-10 justify-center" role="list">
                 <li>
                     <a 
