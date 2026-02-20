@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Thales Mustafa - Software Engineer specializing in Laravel, MySQL, Flutter, and RESTful APIs. 3 years of experience building scalable web applications.">
     <title>Thales Mustafa - Software Engineer Portfolio</title>
     <link rel="stylesheet" href="./output.css">
     <link rel="stylesheet" href="./input.css">
@@ -13,292 +14,427 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Ovo&display=swap" rel="stylesheet">
 </head>
 
-<body class="font-Outfit leading-8 dark:bg-darkTheme dark:text-white">
+<body class="font-Outfit leading-relaxed antialiased dark:bg-darkTheme dark:text-white bg-white text-gray-900">
     <div class="fixed top-0 right-0 w-11/12 -z-10 translate-y-[-80%] dark:hidden">
         <img src="./assets/header-bg-color.png" alt="" class="w-full" />
     </div>
 
-    <nav id="navbar" class="w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50">
-        <p class="bg-white bg-opacity-50 backdrop-blur-lg shadow-sm dark:bg-darkTheme dark:shadow-white/20 sr-only">
-            Hidden</p>
-        <a href="#!">
-            <img src="./assets/logo.png" alt="Logo" class="w-28 cursor-pointer mr-14 dark:hidden" />
-            <img src="./assets/logo_dark.png" alt="Logo" class="w-28 cursor-pointer mr-14 hidden dark:block" />
+    <nav id="navbar" class="w-full fixed px-4 sm:px-6 lg:px-8 xl:px-[8%] py-4 sm:py-5 flex items-center justify-between z-50 transition-all duration-300" role="navigation" aria-label="Main navigation">
+        <a href="#top" aria-label="Home - Thales Mustafa Portfolio" class="focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 rounded-lg transition">
+            <img src="./assets/logo.png" alt="Thales Mustafa Logo" class="w-24 sm:w-28 cursor-pointer mr-8 sm:mr-14 dark:hidden transition-transform hover:scale-105" />
+            <img src="./assets/logo_dark.png" alt="Thales Mustafa Logo" class="w-24 sm:w-28 cursor-pointer mr-8 sm:mr-14 hidden dark:block transition-transform hover:scale-105" />
         </a>
 
         <ul id="navLink"
-            class="hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 bg-white shadow-sm bg-opacity-50 font-Ovo dark:border dark:border-white/30 dark:bg-transparent ">
-            <li><a class='hover:text-gray-500 dark:hover:text-gray-300 transition' href="#top">Home</a></li>
-            <li><a class='hover:text-gray-500 dark:hover:text-gray-300 transition' href="#about">About me</a></li>
-            <li><a class='hover:text-gray-500 dark:hover:text-gray-300 transition' href="#services">Services</a></li>
-            <li><a class='hover:text-gray-500 dark:hover:text-gray-300 transition' href="#work">My Work</a></li>
-            <li><a class='hover:text-gray-500 dark:hover:text-gray-300 transition' href="#contact">Contact me</a></li>
+            class="hidden md:flex items-center gap-4 lg:gap-6 xl:gap-8 rounded-full px-6 lg:px-10 xl:px-12 py-2.5 lg:py-3 bg-white shadow-md bg-opacity-80 backdrop-blur-md font-Ovo dark:border dark:border-white/30 dark:bg-darkHover/80 transition-all duration-300">
+            <li><a class='hover:text-purple-600 dark:hover:text-purple-400 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-purple-500 rounded-lg px-2 py-1' href="#top" aria-label="Navigate to Home section">Home</a></li>
+            <li><a class='hover:text-purple-600 dark:hover:text-purple-400 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-purple-500 rounded-lg px-2 py-1' href="#about" aria-label="Navigate to About section">About me</a></li>
+            <li><a class='hover:text-purple-600 dark:hover:text-purple-400 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-purple-500 rounded-lg px-2 py-1' href="#services" aria-label="Navigate to Services section">Services</a></li>
+            <li><a class='hover:text-purple-600 dark:hover:text-purple-400 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-purple-500 rounded-lg px-2 py-1' href="#work" aria-label="Navigate to Work section">My Work</a></li>
+            <li><a class='hover:text-purple-600 dark:hover:text-purple-400 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-purple-500 rounded-lg px-2 py-1' href="#contact" aria-label="Navigate to Contact section">Contact me</a></li>
         </ul>
 
-        <div class="flex items-center gap-4">
-            <button onclick="toggleTheme()">
-                <img src="./assets/moon_icon.png" alt="" class="w-5 dark:hidden" />
-                <img src="./assets/sun_icon.png" alt="" class="w-5 hidden dark:block" />
+        <div class="flex items-center gap-3 sm:gap-4">
+            <button onclick="toggleTheme()" aria-label="Toggle dark mode" class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-darkHover transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2">
+                <img src="./assets/moon_icon.png" alt="Switch to dark mode" class="w-5 dark:hidden" />
+                <img src="./assets/sun_icon.png" alt="Switch to light mode" class="w-5 hidden dark:block" />
             </button>
 
             <a href="#contact"
-                class="hidden lg:flex items-center gap-3 px-8 py-1.5 border border-gray-300 hover:bg-slate-100/70 dark:hover:bg-darkHover rounded-full ml-4 font-Ovo dark:border-white/30">
+                class="hidden lg:flex items-center gap-2 px-6 xl:px-8 py-2 border border-gray-300 hover:bg-slate-100/70 dark:hover:bg-darkHover rounded-full ml-2 font-Ovo dark:border-white/30 transition-all duration-200 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2">
                 Contact
                 <img src="./assets/arrow-icon.png" alt="" class="w-3 dark:hidden" />
                 <img src="./assets/arrow-icon-dark.png" alt="" class="w-3 hidden dark:block" />
             </a>
 
-            <button class="block md:hidden ml-3" onclick="openMenu()">
-                <img src="./assets/menu-black.png" alt="" class="w-6 dark:hidden" />
-                <img src="./assets/menu-white.png" alt="" class="w-6 hidden dark:block" />
+            <button class="block md:hidden ml-2 p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-darkHover transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2" onclick="openMenu()" aria-label="Open mobile menu" aria-expanded="false" id="menuButton">
+                <img src="./assets/menu-black.png" alt="Menu icon" class="w-6 dark:hidden" />
+                <img src="./assets/menu-white.png" alt="Menu icon" class="w-6 hidden dark:block" />
             </button>
 
         </div>
         <!-- ----- mobile menu ------ -->
         <ul id="mobileMenu"
-            class="flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-rose-50 transition duration-500 font-Ovo dark:bg-darkHover dark:text-white">
+            class="flex md:hidden flex-col gap-6 py-24 px-8 fixed -right-64 top-0 bottom-0 w-70 z-50 h-screen bg-white/95 backdrop-blur-lg transition-transform duration-500 ease-in-out font-Ovo dark:bg-darkHover/95 dark:text-white shadow-2xl">
 
-            <div class="absolute right-6 top-6" onclick="closeMenu()">
-                <img src="./assets/close-black.png" alt="" class="w-5 cursor-pointer dark:hidden" />
-                <img src="./assets/close-white.png" alt="" class="w-5 cursor-pointer hidden dark:block" />
-            </div>
+            <button class="absolute right-6 top-6 p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-darkHover/50 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-purple-500" onclick="closeMenu()" aria-label="Close mobile menu">
+                <img src="./assets/close-black.png" alt="Close menu" class="w-5 cursor-pointer dark:hidden" />
+                <img src="./assets/close-white.png" alt="Close menu" class="w-5 cursor-pointer hidden dark:block" />
+            </button>
 
-            <li><a href="#top" onclick="closeMenu()">Home</a></li>
-            <li><a href="#about" onclick="closeMenu()">About me</a></li>
-            <li><a href="#services" onclick="closeMenu()">Services</a></li>
-            <li><a href="#work" onclick="closeMenu()">My Work</a></li>
-            <li><a href="#contact" onclick="closeMenu()">Contact me</a></li>
+            <li><a href="#top" onclick="closeMenu()" class="block py-3 text-lg hover:text-purple-600 dark:hover:text-purple-400 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-purple-500 rounded-lg px-2">Home</a></li>
+            <li><a href="#about" onclick="closeMenu()" class="block py-3 text-lg hover:text-purple-600 dark:hover:text-purple-400 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-purple-500 rounded-lg px-2">About me</a></li>
+            <li><a href="#services" onclick="closeMenu()" class="block py-3 text-lg hover:text-purple-600 dark:hover:text-purple-400 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-purple-500 rounded-lg px-2">Services</a></li>
+            <li><a href="#work" onclick="closeMenu()" class="block py-3 text-lg hover:text-purple-600 dark:hover:text-purple-400 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-purple-500 rounded-lg px-2">My Work</a></li>
+            <li><a href="#contact" onclick="closeMenu()" class="block py-3 text-lg hover:text-purple-600 dark:hover:text-purple-400 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-purple-500 rounded-lg px-2">Contact me</a></li>
         </ul>
     </nav>
 
     <!-- ----- home section ------ -->
-    <div class="w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4">
-        <img src="./assets/profile-img.webp" alt="" class="rounded-full w-32" />
-        <h3 class="flex items-end gap-2 text-xl md:text-2xl mb-3 font-Ovo">
+    <section id="top" class="w-full px-4 sm:px-6 lg:px-8 max-w-6xl text-center mx-auto min-h-screen flex flex-col items-center justify-center gap-6 sm:gap-8 pt-20 pb-12 sm:pt-24 sm:pb-16">
+        <div class="relative mb-4 sm:mb-6">
+            <img src="./assets/profile-img.webp" alt="Thales Mustafa profile picture" class="rounded-full w-28 h-28 sm:w-32 sm:h-32 md:w-36 md:h-36 mx-auto object-cover shadow-lg ring-4 ring-purple-200 dark:ring-purple-900/50 transition-all duration-300 hover:scale-105" />
+        </div>
+        <h2 class="flex items-end justify-center gap-2 text-lg sm:text-xl md:text-2xl mb-2 sm:mb-4 font-Ovo text-gray-700 dark:text-gray-300">
             Hi! I&apos;m Thales Mustafa
-            <img src="./assets/hand-icon.png" alt="" class="w-6 mb-1" />
-        </h3>
-        <h1 class="text-3xl sm:text-6xl lg:text-[66px] font-Ovo">Software Engineer</h1>
-        <p class="max-w-2xl mx-auto font-Ovo">Results-driven Software Engineer with 3 years of experience specializing
+            <img src="./assets/hand-icon.png" alt="Waving hand emoji" class="w-5 sm:w-6 mb-1 animate-bounce" />
+        </h2>
+        <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[66px] font-Ovo font-bold mb-4 sm:mb-6 text-gray-900 dark:text-white leading-tight">
+            Software Engineer
+        </h1>
+        <p class="max-w-2xl mx-auto font-Ovo text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-300 leading-relaxed px-4 mb-6 sm:mb-8">
+            Results-driven Software Engineer with 3 years of experience specializing
             in Laravel, MySQL, and RESTful APIs. I build scalable web applications, optimize databases, and
-            cross-platform mobile solutions with Flutter.</p>
+            cross-platform mobile solutions with Flutter.
+        </p>
 
-        <div class="flex flex-col sm:flex-row items-center gap-4 mt-4">
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 mt-4 sm:mt-6 w-full px-4">
             <a href="#contact"
-                class="px-10 py-2.5 border rounded-full bg-gradient-to-r from-[#b820e6] to-[#da7d20] text-white flex items-center gap-2 dark:border-transparent">
+                class="w-full sm:w-auto px-8 sm:px-10 py-3 sm:py-3.5 border rounded-full bg-gradient-to-r from-[#b820e6] to-[#da7d20] text-white flex items-center justify-center gap-2 dark:border-transparent font-medium shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-purple-500 focus:ring-offset-2">
                 Contact me <img src="./assets/right-arrow-white.png" alt="" class="w-4" />
             </a>
 
             <a href="./assets/thales_mustafa.pdf" download
-                class="px-10 py-2.5 rounded-full border border-gray-300 dark:border-white/25 hover:bg-slate-100/70 dark:hover:bg-darkHover flex items-center gap-2 bg-white dark:bg-transparent dark:text-white">
-                My resume <img src="./assets/download-icon.png" alt="" class="w-4 dark:invert" />
+                class="w-full sm:w-auto px-8 sm:px-10 py-3 sm:py-3.5 rounded-full border border-gray-300 dark:border-white/25 hover:bg-slate-100/70 dark:hover:bg-darkHover flex items-center justify-center gap-2 bg-white dark:bg-transparent dark:text-white font-medium shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-purple-500 focus:ring-offset-2">
+                My resume <img src="./assets/download-icon.png" alt="Download icon" class="w-4 dark:invert" />
             </a>
         </div>
-    </div>
+    </section>
 
     <!-- ----- about me section ------ -->
-    <div id="about" class="w-full px-[12%] py-10 scroll-mt-20">
-        <h4 class="text-center mb-2 text-lg font-Ovo">Introduction</h4>
-        <h2 class="text-center text-5xl font-Ovo">About me</h2>
-        <div class="flex w-full flex-col lg:flex-row items-center gap-20 my-20">
-            <div class="max-w-max mx-auto relative"><img src="./assets/user-image.webp" alt=""
-                    class="w-64 sm:w-80 rounded-3xl max-w-none">
-                <!-- <div
-                    class="bg-white w-1/2 aspect-square absolute right-0 bottom-0 rounded-full translate-x-1/4 translate-y-1/3 shadow-[0_4px_55px_rgba(149,0,162,0.15)] flex items-center justify-center">
-                    <img src="./assets/circular-text.png" alt="" class="w-full animate-spin_slow">
-                    <img src="./assets/dev-icon.png" alt=""
-                        class="w-1/4 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                </div> -->
+    <section id="about" class="w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-[8%] py-12 sm:py-16 md:py-20 lg:py-24 scroll-mt-20">
+        <header class="text-center mb-8 sm:mb-12 md:mb-16">
+            <h4 class="mb-2 sm:mb-3 text-base sm:text-lg md:text-xl font-Ovo text-purple-600 dark:text-purple-400 uppercase tracking-wider">Introduction</h4>
+            <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-Ovo font-bold text-gray-900 dark:text-white">About me</h2>
+        </header>
+        <div class="flex w-full flex-col lg:flex-row items-center lg:items-start gap-12 sm:gap-16 lg:gap-20 my-12 sm:my-16 lg:my-20">
+            <div class="max-w-max mx-auto lg:mx-0 relative flex-shrink-0">
+                <img src="./assets/user-image.webp" alt="Thales Mustafa professional photo"
+                    class="w-56 sm:w-64 md:w-72 lg:w-80 rounded-3xl max-w-none shadow-2xl ring-4 ring-purple-200 dark:ring-purple-900/50 transition-transform duration-300 hover:scale-105">
             </div>
-            <div class="flex-1">
-                <p class="mb-10 max-w-2xl font-Ovo">Results-driven Software Engineer with 3 years of experience
+            <div class="flex-1 w-full">
+                <p class="mb-8 sm:mb-10 md:mb-12 max-w-2xl font-Ovo text-base sm:text-lg md:text-xl text-gray-700 dark:text-gray-300 leading-relaxed">
+                    Results-driven Software Engineer with 3 years of experience
                     specializing in Laravel, MySQL, and RESTful API development. I architect scalable web applications,
                     optimize complex databases, and build cross-platform mobile solutions with Flutter. Committed to
-                    TDD, SOLID principles, and Clean Code.</p>
-                <ul class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl">
+                    TDD, SOLID principles, and Clean Code.
+                </p>
+                <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 max-w-4xl mb-10 sm:mb-12">
                     <li
-                        class="border border-gray-300 dark:border-white/30 rounded-xl p-6 cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 hover:shadow-black dark:hover:shadow-white/80 dark:hover:bg-darkHover/50">
-                        <img src="./assets/code-icon.png" alt="" class="w-7 mt-3 dark:hidden"><img
-                            src="./assets/code-icon-dark.png" alt="" class="w-7 mt-3 hidden dark:block">
-                        <h3 class="my-4 font-semibold text-gray-700 dark:text-white">Languages & Stack</h3>
-                        <p class="text-gray-600 text-sm dark:text-white/80">PHP/Laravel, JavaScript/Vue.js, Flutter,
+                        class="border border-gray-300 dark:border-white/30 rounded-xl p-5 sm:p-6 cursor-pointer hover:bg-lightHover hover:-translate-y-2 duration-300 hover:shadow-lg dark:hover:shadow-white/20 dark:hover:bg-darkHover/50 transition-all focus-within:ring-2 focus-within:ring-purple-500">
+                        <img src="./assets/code-icon.png" alt="Code icon" class="w-6 sm:w-7 mt-2 dark:hidden"><img
+                            src="./assets/code-icon-dark.png" alt="Code icon" class="w-6 sm:w-7 mt-2 hidden dark:block">
+                        <h3 class="my-3 sm:my-4 font-semibold text-base sm:text-lg text-gray-700 dark:text-white">Languages & Stack</h3>
+                        <p class="text-gray-600 text-sm sm:text-base dark:text-white/80 leading-relaxed">PHP/Laravel, JavaScript/Vue.js, Flutter,
                             HTML/CSS, MySQL</p>
                     </li>
                     <li
-                        class="border border-gray-300 dark:border-white/30 rounded-xl p-6 cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 hover:shadow-black dark:hover:shadow-white/80 dark:hover:bg-darkHover/50">
-                        <img src="./assets/edu-icon.png" alt="" class="w-7 mt-3 dark:hidden"><img
-                            src="./assets/edu-icon-dark.png" alt="" class="w-7 mt-3 hidden dark:block">
-                        <h3 class="my-4 font-semibold text-gray-700 dark:text-white">Education</h3>
-                        <p class="text-gray-600 text-sm dark:text-white/80">Bachelor&apos;s in Information Technology
+                        class="border border-gray-300 dark:border-white/30 rounded-xl p-5 sm:p-6 cursor-pointer hover:bg-lightHover hover:-translate-y-2 duration-300 hover:shadow-lg dark:hover:shadow-white/20 dark:hover:bg-darkHover/50 transition-all focus-within:ring-2 focus-within:ring-purple-500">
+                        <img src="./assets/edu-icon.png" alt="Education icon" class="w-6 sm:w-7 mt-2 dark:hidden"><img
+                            src="./assets/edu-icon-dark.png" alt="Education icon" class="w-6 sm:w-7 mt-2 hidden dark:block">
+                        <h3 class="my-3 sm:my-4 font-semibold text-base sm:text-lg text-gray-700 dark:text-white">Education</h3>
+                        <p class="text-gray-600 text-sm sm:text-base dark:text-white/80 leading-relaxed">Bachelor&apos;s in Information Technology
                             Engineering, Damascus University (2024)</p>
                     </li>
                     <li
-                        class="border border-gray-300 dark:border-white/30 rounded-xl p-6 cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 hover:shadow-black dark:hover:shadow-white/80 dark:hover:bg-darkHover/50">
-                        <img src="./assets/project-icon.png" alt="" class="w-7 mt-3 dark:hidden"><img
-                            src="./assets/project-icon-dark.png" alt="" class="w-7 mt-3 hidden dark:block">
-                        <h3 class="my-4 font-semibold text-gray-700 dark:text-white">Projects</h3>
-                        <p class="text-gray-600 text-sm dark:text-white/80">Fleet management, GPS tracking, HR systems,
+                        class="border border-gray-300 dark:border-white/30 rounded-xl p-5 sm:p-6 cursor-pointer hover:bg-lightHover hover:-translate-y-2 duration-300 hover:shadow-lg dark:hover:shadow-white/20 dark:hover:bg-darkHover/50 transition-all focus-within:ring-2 focus-within:ring-purple-500 sm:col-span-2 lg:col-span-1">
+                        <img src="./assets/project-icon.png" alt="Project icon" class="w-6 sm:w-7 mt-2 dark:hidden"><img
+                            src="./assets/project-icon-dark.png" alt="Project icon" class="w-6 sm:w-7 mt-2 hidden dark:block">
+                        <h3 class="my-3 sm:my-4 font-semibold text-base sm:text-lg text-gray-700 dark:text-white">Projects</h3>
+                        <p class="text-gray-600 text-sm sm:text-base dark:text-white/80 leading-relaxed">Fleet management, GPS tracking, HR systems,
                             Flutter apps at MTS Group</p>
                     </li>
                 </ul>
-                <h4 class="my-6 text-gray-700 font-Ovo dark:text-white/80">Tools I use</h4>
-                <ul class="flex items-center gap-3 sm:gap-5">
+                <h4 class="my-6 sm:my-8 text-lg sm:text-xl md:text-2xl text-gray-700 dark:text-white/90 font-Ovo font-semibold">Tools I use</h4>
+                <ul class="flex flex-wrap items-center gap-3 sm:gap-4 md:gap-5">
                     <li
-                        class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-300 dark:border-white/30 rounded-lg cursor-pointer hover:-translate-y-1 duration-500">
-                        <img src="./assets/php_storm.png" alt="php_storm" class="w-5 sm:w-7">
+                        class="flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 aspect-square border border-gray-300 dark:border-white/30 rounded-lg cursor-pointer hover:-translate-y-2 hover:shadow-md duration-300 transition-all bg-white dark:bg-darkHover/30">
+                        <img src="./assets/php_storm.png" alt="PHPStorm IDE" class="w-5 sm:w-7" title="PHPStorm">
                     </li>
                     <li
-                        class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-300 dark:border-white/30 rounded-lg cursor-pointer hover:-translate-y-1 duration-500">
-                        <img src="./assets/vscode.png" alt="vscode" class="w-5 sm:w-7">
+                        class="flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 aspect-square border border-gray-300 dark:border-white/30 rounded-lg cursor-pointer hover:-translate-y-2 hover:shadow-md duration-300 transition-all bg-white dark:bg-darkHover/30">
+                        <img src="./assets/vscode.png" alt="VS Code" class="w-5 sm:w-7" title="Visual Studio Code">
                     </li>
                     <li
-                        class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-300 dark:border-white/30 rounded-lg cursor-pointer hover:-translate-y-1 duration-500">
-                        <img src="./assets/android_studio.png" alt="android_studio" class="w-5 sm:w-7">
+                        class="flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 aspect-square border border-gray-300 dark:border-white/30 rounded-lg cursor-pointer hover:-translate-y-2 hover:shadow-md duration-300 transition-all bg-white dark:bg-darkHover/30">
+                        <img src="./assets/android_studio.png" alt="Android Studio" class="w-5 sm:w-7" title="Android Studio">
                     </li>
                     <li
-                        class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-300 dark:border-white/30 rounded-lg cursor-pointer hover:-translate-y-1 duration-500">
-                        <img src="./assets/docker.png" alt="docker" class="w-5 sm:w-7">
+                        class="flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 aspect-square border border-gray-300 dark:border-white/30 rounded-lg cursor-pointer hover:-translate-y-2 hover:shadow-md duration-300 transition-all bg-white dark:bg-darkHover/30">
+                        <img src="./assets/docker.png" alt="Docker" class="w-5 sm:w-7" title="Docker">
                     </li>
                     <li
-                        class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-300 dark:border-white/30 rounded-lg cursor-pointer hover:-translate-y-1 duration-500">
-                        <img src="./assets/linux.png" alt="docker" class="w-5 sm:w-7">
+                        class="flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 aspect-square border border-gray-300 dark:border-white/30 rounded-lg cursor-pointer hover:-translate-y-2 hover:shadow-md duration-300 transition-all bg-white dark:bg-darkHover/30">
+                        <img src="./assets/linux.png" alt="Linux" class="w-5 sm:w-7" title="Linux">
                     </li>
                     <li
-                        class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-300 dark:border-white/30 rounded-lg cursor-pointer hover:-translate-y-1 duration-500">
-                        <img src="./assets/figma.png" alt="figma" class="w-5 sm:w-7">
+                        class="flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 aspect-square border border-gray-300 dark:border-white/30 rounded-lg cursor-pointer hover:-translate-y-2 hover:shadow-md duration-300 transition-all bg-white dark:bg-darkHover/30">
+                        <img src="./assets/figma.png" alt="Figma" class="w-5 sm:w-7" title="Figma">
                     </li>
                     <li
-                        class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-300 dark:border-white/30 rounded-lg cursor-pointer hover:-translate-y-1 duration-500">
-                        <img src="./assets/git.png" alt="git" class="w-5 sm:w-7">
+                        class="flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 aspect-square border border-gray-300 dark:border-white/30 rounded-lg cursor-pointer hover:-translate-y-2 hover:shadow-md duration-300 transition-all bg-white dark:bg-darkHover/30">
+                        <img src="./assets/git.png" alt="Git" class="w-5 sm:w-7" title="Git">
                     </li>
                 </ul>
             </div>
         </div>
-    </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-[8%] py-12 sm:py-16 md:py-20 lg:py-24 scroll-mt-20 bg-gray-50 dark:bg-darkHover/30">
+        <header class="text-center mb-8 sm:mb-12 md:mb-16">
+            <h4 class="mb-2 sm:mb-3 text-base sm:text-lg md:text-xl font-Ovo text-purple-600 dark:text-purple-400 uppercase tracking-wider">What I offer</h4>
+            <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-Ovo font-bold text-gray-900 dark:text-white mb-4 sm:mb-6">Services</h2>
+            <p class="text-center max-w-2xl mx-auto mt-4 sm:mt-5 mb-8 sm:mb-12 font-Ovo text-base sm:text-lg text-gray-600 dark:text-gray-300 leading-relaxed px-4">
+                Comprehensive software development services tailored to your business needs.
+            </p>
+        </header>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
+            <div class="bg-white dark:bg-darkHover/50 border border-gray-200 dark:border-white/20 rounded-xl sm:rounded-2xl p-6 sm:p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+                <div class="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-4 sm:mb-6">
+                    <svg class="w-6 h-6 sm:w-7 sm:h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                    </svg>
+                </div>
+                <h3 class="text-xl sm:text-2xl font-Ovo font-semibold text-gray-900 dark:text-white mb-3 sm:mb-4">Backend Development</h3>
+                <p class="text-gray-600 dark:text-gray-300 text-sm sm:text-base leading-relaxed">Scalable Laravel applications with RESTful APIs, database optimization, and robust architecture following SOLID principles.</p>
+            </div>
+            <div class="bg-white dark:bg-darkHover/50 border border-gray-200 dark:border-white/20 rounded-xl sm:rounded-2xl p-6 sm:p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+                <div class="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4 sm:mb-6">
+                    <svg class="w-6 h-6 sm:w-7 sm:h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                    </svg>
+                </div>
+                <h3 class="text-xl sm:text-2xl font-Ovo font-semibold text-gray-900 dark:text-white mb-3 sm:mb-4">Mobile Development</h3>
+                <p class="text-gray-600 dark:text-gray-300 text-sm sm:text-base leading-relaxed">Cross-platform Flutter applications with native performance, beautiful UI/UX, and seamless user experiences.</p>
+            </div>
+            <div class="bg-white dark:bg-darkHover/50 border border-gray-200 dark:border-white/20 rounded-xl sm:rounded-2xl p-6 sm:p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 md:col-span-2 lg:col-span-1">
+                <div class="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mb-4 sm:mb-6">
+                    <svg class="w-6 h-6 sm:w-7 sm:h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                    </svg>
+                </div>
+                <h3 class="text-xl sm:text-2xl font-Ovo font-semibold text-gray-900 dark:text-white mb-3 sm:mb-4">Code Quality</h3>
+                <p class="text-gray-600 dark:text-gray-300 text-sm sm:text-base leading-relaxed">Clean Code practices, Test-Driven Development (TDD), and maintainable solutions that scale with your business.</p>
+            </div>
+        </div>
+    </section>
 
     <!-- My Work Section -->
-    <div id="work" class="w-full px-[12%] py-10 scroll-mt-20">
-        <h4 class="text-center mb-2 text-lg font-Ovo">My portfolio</h4>
-        <h2 class="text-center text-5xl font-Ovo">My latest work</h2>
-        <p class="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo">A collection of projects from MTS Group showcasing
-            Laravel backends, Flutter apps, and full-stack solutions.</p>
-        <div class="grid grid-cols-auto my-10 gap-5 dark:text-black">
-            <div class="aspect-square bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group"
-                style="background-image: url('./assets/work-1.png');">
+    <section id="work" class="w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-[8%] py-12 sm:py-16 md:py-20 lg:py-24 scroll-mt-20">
+        <header class="text-center mb-8 sm:mb-12 md:mb-16">
+            <h4 class="mb-2 sm:mb-3 text-base sm:text-lg md:text-xl font-Ovo text-purple-600 dark:text-purple-400 uppercase tracking-wider">My portfolio</h4>
+            <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-Ovo font-bold text-gray-900 dark:text-white mb-4 sm:mb-6">My latest work</h2>
+            <p class="text-center max-w-2xl mx-auto mt-4 sm:mt-5 mb-8 sm:mb-12 font-Ovo text-base sm:text-lg text-gray-600 dark:text-gray-300 leading-relaxed px-4">
+                A collection of projects from MTS Group showcasing
+                Laravel backends, Flutter apps, and full-stack solutions.
+            </p>
+        </header>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-4 sm:gap-5 md:gap-6 my-8 sm:my-10 md:my-12">
+            <article class="aspect-square bg-no-repeat bg-cover bg-center rounded-xl sm:rounded-2xl relative cursor-pointer group overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 focus-within:ring-4 focus-within:ring-purple-500 focus-within:ring-offset-2"
+                style="background-image: url('./assets/work-1.png');" tabindex="0">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div
-                    class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7">
-                    <div>
-                        <h2 class="font-semibold">Fleet Management System</h2>
-                        <p class="text-sm text-gray-700">Laravel · Load assignments, maintenance, inventory</p>
+                    class="bg-white dark:bg-darkHover w-[92%] sm:w-10/12 rounded-lg sm:rounded-md absolute bottom-4 sm:bottom-5 left-1/2 -translate-x-1/2 py-3 sm:py-4 px-4 sm:px-5 flex items-center justify-between duration-300 group-hover:bottom-6 sm:group-hover:bottom-7 shadow-lg">
+                    <div class="flex-1 min-w-0 pr-2">
+                        <h3 class="font-semibold text-sm sm:text-base md:text-lg text-gray-900 dark:text-white mb-1">Fleet Management System</h3>
+                        <p class="text-xs sm:text-sm text-gray-700 dark:text-gray-300 truncate">Laravel · Load assignments, maintenance, inventory</p>
                     </div>
                     <div
-                        class="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition">
-                        <img src="./assets/send-icon.png" alt="" class="w-5">
+                        class="border rounded-full border-black dark:border-white w-8 h-8 sm:w-9 sm:h-9 aspect-square flex items-center justify-center shadow-md group-hover:bg-lime-300 dark:group-hover:bg-purple-500 transition-all flex-shrink-0">
+                        <img src="./assets/send-icon.png" alt="View project" class="w-4 sm:w-5 dark:invert">
                     </div>
                 </div>
-            </div>
-            <div class="aspect-square bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group"
-                style="background-image: url('./assets/work-2.png');">
+            </article>
+            <article class="aspect-square bg-no-repeat bg-cover bg-center rounded-xl sm:rounded-2xl relative cursor-pointer group overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 focus-within:ring-4 focus-within:ring-purple-500 focus-within:ring-offset-2"
+                style="background-image: url('./assets/work-2.png');" tabindex="0">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div
-                    class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7">
-                    <div>
-                        <h2 class="font-semibold">MTS GPS Tracking App</h2>
-                        <p class="text-sm text-gray-700">Flutter · Real-time vehicle tracking, 1,700+ vehicles</p>
+                    class="bg-white dark:bg-darkHover w-[92%] sm:w-10/12 rounded-lg sm:rounded-md absolute bottom-4 sm:bottom-5 left-1/2 -translate-x-1/2 py-3 sm:py-4 px-4 sm:px-5 flex items-center justify-between duration-300 group-hover:bottom-6 sm:group-hover:bottom-7 shadow-lg">
+                    <div class="flex-1 min-w-0 pr-2">
+                        <h3 class="font-semibold text-sm sm:text-base md:text-lg text-gray-900 dark:text-white mb-1">MTS GPS Tracking App</h3>
+                        <p class="text-xs sm:text-sm text-gray-700 dark:text-gray-300 truncate">Flutter · Real-time vehicle tracking, 1,700+ vehicles</p>
                     </div>
                     <div
-                        class="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition">
-                        <img src="./assets/send-icon.png" alt="" class="w-5">
+                        class="border rounded-full border-black dark:border-white w-8 h-8 sm:w-9 sm:h-9 aspect-square flex items-center justify-center shadow-md group-hover:bg-lime-300 dark:group-hover:bg-purple-500 transition-all flex-shrink-0">
+                        <img src="./assets/send-icon.png" alt="View project" class="w-4 sm:w-5 dark:invert">
                     </div>
                 </div>
-            </div>
-            <div class="aspect-square bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group"
-                style="background-image: url('./assets/work-3.png');">
+            </article>
+            <article class="aspect-square bg-no-repeat bg-cover bg-center rounded-xl sm:rounded-2xl relative cursor-pointer group overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 focus-within:ring-4 focus-within:ring-purple-500 focus-within:ring-offset-2"
+                style="background-image: url('./assets/work-3.png');" tabindex="0">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div
-                    class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7">
-                    <div>
-                        <h2 class="font-semibold">HR System & Biometric</h2>
-                        <p class="text-sm text-gray-700">Laravel · ZKTeco, Gmail API, expense reporting</p>
+                    class="bg-white dark:bg-darkHover w-[92%] sm:w-10/12 rounded-lg sm:rounded-md absolute bottom-4 sm:bottom-5 left-1/2 -translate-x-1/2 py-3 sm:py-4 px-4 sm:px-5 flex items-center justify-between duration-300 group-hover:bottom-6 sm:group-hover:bottom-7 shadow-lg">
+                    <div class="flex-1 min-w-0 pr-2">
+                        <h3 class="font-semibold text-sm sm:text-base md:text-lg text-gray-900 dark:text-white mb-1">HR System & Biometric</h3>
+                        <p class="text-xs sm:text-sm text-gray-700 dark:text-gray-300 truncate">Laravel · ZKTeco, Gmail API, expense reporting</p>
                     </div>
                     <div
-                        class="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition">
-                        <img src="./assets/send-icon.png" alt="" class="w-5">
+                        class="border rounded-full border-black dark:border-white w-8 h-8 sm:w-9 sm:h-9 aspect-square flex items-center justify-center shadow-md group-hover:bg-lime-300 dark:group-hover:bg-purple-500 transition-all flex-shrink-0">
+                        <img src="./assets/send-icon.png" alt="View project" class="w-4 sm:w-5 dark:invert">
                     </div>
                 </div>
-            </div>
-            <div class="aspect-square bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group"
-                style="background-image: url('./assets/work-4.png');">
+            </article>
+            <article class="aspect-square bg-no-repeat bg-cover bg-center rounded-xl sm:rounded-2xl relative cursor-pointer group overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 focus-within:ring-4 focus-within:ring-purple-500 focus-within:ring-offset-2"
+                style="background-image: url('./assets/work-4.png');" tabindex="0">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div
-                    class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7">
-                    <div>
-                        <h2 class="font-semibold">MTS TV Entertainment App</h2>
-                        <p class="text-sm text-gray-700">Flutter & Laravel · Movies, TV shows, courses</p>
+                    class="bg-white dark:bg-darkHover w-[92%] sm:w-10/12 rounded-lg sm:rounded-md absolute bottom-4 sm:bottom-5 left-1/2 -translate-x-1/2 py-3 sm:py-4 px-4 sm:px-5 flex items-center justify-between duration-300 group-hover:bottom-6 sm:group-hover:bottom-7 shadow-lg">
+                    <div class="flex-1 min-w-0 pr-2">
+                        <h3 class="font-semibold text-sm sm:text-base md:text-lg text-gray-900 dark:text-white mb-1">MTS TV Entertainment App</h3>
+                        <p class="text-xs sm:text-sm text-gray-700 dark:text-gray-300 truncate">Flutter & Laravel · Movies, TV shows, courses</p>
                     </div>
                     <div
-                        class="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition">
-                        <img src="./assets/send-icon.png" alt="" class="w-5">
+                        class="border rounded-full border-black dark:border-white w-8 h-8 sm:w-9 sm:h-9 aspect-square flex items-center justify-center shadow-md group-hover:bg-lime-300 dark:group-hover:bg-purple-500 transition-all flex-shrink-0">
+                        <img src="./assets/send-icon.png" alt="View project" class="w-4 sm:w-5 dark:invert">
                     </div>
                 </div>
-            </div>
-        </div><a href="#"
-            class="w-max flex items-center justify-center gap-2 text-gray-700 border border-gray-300 dark:border-white/25 hover:bg-slate-100/70 dark:hover:bg-darkHover rounded-full py-2 px-8 mx-auto my-20 duration-300 dark:text-white">Show
-            more<img src="./assets/right-arrow-bold.png" alt="" class="w-4 dark:hidden"><img
-                src="./assets/right-arrow-bold-dark.png" alt="" class="w-4 hidden dark:block"></a>
-    </div>
+            </article>
+        </div>
+        <div class="text-center mt-12 sm:mt-16 md:mt-20">
+            <a href="#"
+                class="inline-flex items-center justify-center gap-2 text-gray-700 dark:text-white border border-gray-300 dark:border-white/25 hover:bg-slate-100/70 dark:hover:bg-darkHover rounded-full py-2.5 sm:py-3 px-6 sm:px-8 mx-auto duration-300 font-medium shadow-md hover:shadow-lg hover:scale-105 transition-all focus:outline-none focus:ring-4 focus:ring-purple-500 focus:ring-offset-2">
+                Show more
+                <img src="./assets/right-arrow-bold.png" alt="" class="w-4 dark:hidden">
+                <img src="./assets/right-arrow-bold-dark.png" alt="" class="w-4 hidden dark:block">
+            </a>
+        </div>
+    </section>
 
     <!-- Contact me section -->
-    <div id="contact"
-        class="w-full px-[12%] py-10 scroll-mt-20 bg-[url('./assets/footer-bg-color.png')] bg-no-repeat bg-[length:90%_auto] bg-center dark:bg-none">
-        <h4 class="text-center mb-2 text-lg font-Ovo">Connect with me</h4>
-        <h2 class="text-center text-5xl font-Ovo">Get in touch</h2>
-        <p class="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo">I'd love to hear from you! If you have any
-            questions, comments or feedback, please use the form below.
-        </p>
-        <form class="max-w-2xl mx-auto">
+    <section id="contact"
+        class="w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-[8%] py-12 sm:py-16 md:py-20 lg:py-24 scroll-mt-20 bg-[url('./assets/footer-bg-color.png')] bg-no-repeat bg-[length:90%_auto] bg-center dark:bg-none">
+        <header class="text-center mb-8 sm:mb-12 md:mb-16">
+            <h4 class="mb-2 sm:mb-3 text-base sm:text-lg md:text-xl font-Ovo text-purple-600 dark:text-purple-400 uppercase tracking-wider">Connect with me</h4>
+            <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-Ovo font-bold text-gray-900 dark:text-white mb-4 sm:mb-6">Get in touch</h2>
+            <p class="text-center max-w-2xl mx-auto mt-4 sm:mt-5 mb-8 sm:mb-12 font-Ovo text-base sm:text-lg text-gray-600 dark:text-gray-300 leading-relaxed px-4">
+                I'd love to hear from you! If you have any
+                questions, comments or feedback, please use the form below.
+            </p>
+        </header>
+        <form class="max-w-2xl mx-auto px-4" aria-label="Contact form">
             <input type="hidden" name="subject" value="Thales Mustafa - New form Submission">
-            <div class="grid grid-cols-auto gap-6 mt-10 mb-8">
-                <input type="text" placeholder="Enter your name"
-                    class="flex-1 px-3 py-2 focus:ring-1 outline-none border border-gray-300 dark:border-white/30 rounded-md bg-white dark:bg-darkHover/30"
-                    ] required="" name="name">
-                <input type="email" placeholder="Enter your email" ]
-                    class="flex-1 px-3 py-2 focus:ring-1 outline-none border border-gray-300 dark:border-white/30 rounded-md bg-white dark:bg-darkHover/30"
-                    required="" name="email">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 mt-6 sm:mt-10 mb-6 sm:mb-8">
+                <div>
+                    <label for="name" class="sr-only">Your name</label>
+                    <input 
+                        type="text" 
+                        id="name"
+                        placeholder="Enter your name"
+                        class="w-full px-4 sm:px-5 py-3 sm:py-3.5 focus:ring-2 focus:ring-purple-500 focus:border-purple-500 outline-none border border-gray-300 dark:border-white/30 rounded-lg sm:rounded-xl bg-white dark:bg-darkHover/50 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 transition-all duration-200 shadow-sm hover:shadow-md"
+                        required 
+                        name="name"
+                        aria-required="true">
+                </div>
+                <div>
+                    <label for="email" class="sr-only">Your email</label>
+                    <input 
+                        type="email" 
+                        id="email"
+                        placeholder="Enter your email"
+                        class="w-full px-4 sm:px-5 py-3 sm:py-3.5 focus:ring-2 focus:ring-purple-500 focus:border-purple-500 outline-none border border-gray-300 dark:border-white/30 rounded-lg sm:rounded-xl bg-white dark:bg-darkHover/50 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 transition-all duration-200 shadow-sm hover:shadow-md"
+                        required 
+                        name="email"
+                        aria-required="true">
+                </div>
             </div>
-            <textarea rows="6" placeholder="Enter your message"
-                class="w-full px-4 py-2 focus:ring-1 outline-none border border-gray-300 dark:border-white/30 rounded-md bg-white mb-6 dark:bg-darkHover/30"
-                required="" name="message"></textarea>
-            <button type="submit"
-                class="py-2 px-8 w-max flex items-center justify-between gap-2 bg-black/80 text-white rounded-full mx-auto hover:bg-black duration-500 dark:bg-transparent dark:border dark:border-white/30 dark:hover:bg-darkHover">
-                Submit now
-                <img src="./assets/right-arrow-white.png" alt="" class="w-4">
-            </button>
-            <p class="mt-4"></p>
+            <div class="mb-6 sm:mb-8">
+                <label for="message" class="sr-only">Your message</label>
+                <textarea 
+                    id="message"
+                    rows="6" 
+                    placeholder="Enter your message"
+                    class="w-full px-4 sm:px-5 py-3 sm:py-3.5 focus:ring-2 focus:ring-purple-500 focus:border-purple-500 outline-none border border-gray-300 dark:border-white/30 rounded-lg sm:rounded-xl bg-white dark:bg-darkHover/50 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 transition-all duration-200 shadow-sm hover:shadow-md resize-y min-h-[120px]"
+                    required 
+                    name="message"
+                    aria-required="true"></textarea>
+            </div>
+            <div class="text-center">
+                <button 
+                    type="submit"
+                    class="py-3 sm:py-3.5 px-8 sm:px-10 w-full sm:w-auto flex items-center justify-center gap-2 bg-gradient-to-r from-[#b820e6] to-[#da7d20] text-white rounded-full mx-auto hover:shadow-xl hover:scale-105 duration-300 dark:border dark:border-transparent font-medium transition-all focus:outline-none focus:ring-4 focus:ring-purple-500 focus:ring-offset-2">
+                    Submit now
+                    <img src="./assets/right-arrow-white.png" alt="" class="w-4">
+                </button>
+            </div>
         </form>
-    </div>
+    </section>
 
     <!-- Footer -->
-    <div class="mt-20">
-        <div class="text-center">
-            <a href="#!">
-                <img src="./assets/logo.png" alt="" class="w-36 mx-auto mb-2 dark:hidden">
-                <img src="./assets/logo_dark.png" alt="" class="w-36 mx-auto mb-2 hidden dark:block">
+    <footer class="mt-12 sm:mt-16 md:mt-20 lg:mt-24 pb-8 sm:pb-12" role="contentinfo">
+        <div class="text-center mb-8 sm:mb-12">
+            <a href="#top" aria-label="Back to top" class="inline-block focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 rounded-lg transition-transform hover:scale-105">
+                <img src="./assets/logo.png" alt="Thales Mustafa Logo" class="w-32 sm:w-36 mx-auto mb-3 sm:mb-4 dark:hidden">
+                <img src="./assets/logo_dark.png" alt="Thales Mustafa Logo" class="w-32 sm:w-36 mx-auto mb-3 sm:mb-4 hidden dark:block">
             </a>
-            <div class="w-max flex items-center gap-2 mx-auto">
-                <img src="./assets/mail_icon.png" alt="" class="w-5 dark:hidden">
-                <img src="./assets/mail_icon_dark.png" alt="" class="w-5 hidden dark:block">
-                <a href="mailto:thales_mustafa98@outlook.com">thales_mustafa98@outlook.com</a>
+            <div class="flex items-center justify-center gap-2 mx-auto mb-6 sm:mb-8">
+                <img src="./assets/mail_icon.png" alt="Email icon" class="w-5 dark:hidden">
+                <img src="./assets/mail_icon_dark.png" alt="Email icon" class="w-5 hidden dark:block">
+                <a 
+                    href="mailto:thales_mustafa98@outlook.com" 
+                    class="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 rounded-lg px-2 py-1"
+                    aria-label="Send email to thales_mustafa98@outlook.com">
+                    thales_mustafa98@outlook.com
+                </a>
             </div>
         </div>
-        <div class="text-center sm:flex items-center justify-between border-t border-gray-400 mx-[10%] mt-12 py-3">
-            <p>© 2025 Thales Mustafa. All rights reserved.</p>
-            <ul class="flex items-center gap-10 justify-center mt-4 sm:mt-0">
-                <li><a target="_blank" href="https://github.com/ThalesM98Dev">GitHub</a></li>
-                <li><a target="_blank" href="https://www.linkedin.com/in/thales-mustafa-282768258/">LinkedIn</a></li>
-                <li><a target="_blank" href="https://wa.me/963935563482">WhatsApp</a></li>
-                <li><a target="_blank" href="https://t.me/thales_mu98">Telegram</a></li>
-                <li><a target="_blank" href="https://maps.app.goo.gl/ED19PWrFfQqP72W9A">Damascus, Syria</a></li>
+        <div class="text-center sm:flex items-center justify-between border-t border-gray-300 dark:border-gray-700 mx-4 sm:mx-8 md:mx-[10%] pt-6 sm:pt-8 pb-4 sm:pb-6">
+            <p class="text-sm sm:text-base text-gray-600 dark:text-gray-400 mb-4 sm:mb-0">© 2025 Thales Mustafa. All rights reserved.</p>
+            <ul class="flex flex-wrap items-center gap-4 sm:gap-6 md:gap-8 lg:gap-10 justify-center" role="list">
+                <li>
+                    <a 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        href="https://github.com/ThalesM98Dev" 
+                        class="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 rounded-lg px-2 py-1"
+                        aria-label="Visit GitHub profile">
+                        GitHub
+                    </a>
+                </li>
+                <li>
+                    <a 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        href="https://www.linkedin.com/in/thales-mustafa-282768258/" 
+                        class="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 rounded-lg px-2 py-1"
+                        aria-label="Visit LinkedIn profile">
+                        LinkedIn
+                    </a>
+                </li>
+                <li>
+                    <a 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        href="https://wa.me/963935563482" 
+                        class="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 rounded-lg px-2 py-1"
+                        aria-label="Contact via WhatsApp">
+                        WhatsApp
+                    </a>
+                </li>
+                <li>
+                    <a 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        href="https://t.me/thales_mu98" 
+                        class="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 rounded-lg px-2 py-1"
+                        aria-label="Contact via Telegram">
+                        Telegram
+                    </a>
+                </li>
+                <li>
+                    <a 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        href="https://maps.app.goo.gl/ED19PWrFfQqP72W9A" 
+                        class="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 rounded-lg px-2 py-1"
+                        aria-label="View location on map">
+                        Damascus, Syria
+                    </a>
+                </li>
             </ul>
         </div>
-    </div>
+    </footer>
 
     <script src="./script.js"></script>
 
