@@ -32,7 +32,7 @@ const menuButton = document.getElementById("menuButton");
 
 function openMenu() {
     if (mobileMenu) {
-        mobileMenu.style.transform = 'translateX(-18rem)';
+        mobileMenu.style.transform = 'translateX(-16rem)';
         mobileMenu.style.visibility = 'visible';
         if (menuButton) {
             menuButton.setAttribute('aria-expanded', 'true');

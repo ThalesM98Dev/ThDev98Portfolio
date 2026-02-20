@@ -94,7 +94,7 @@ textarea:focus {
     z-index: -1;
 }
 
-#mobileMenu[style*="translateX(-18rem)"]::before {
+#mobileMenu[style*="translateX(-16rem)"]::before {
     opacity: 1;
     pointer-events: all;
 }
